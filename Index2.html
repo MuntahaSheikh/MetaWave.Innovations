@@ -294,6 +294,8 @@
             <img src="Assets/Images/banner.jpg" alt="MetaWave Hero Image">
         </div>
     </section>
+
+
     <section id="services" class="services-section">
         <h2 class="section-title">Our Services</h2>
         <div class="services-wrapper">
@@ -323,7 +325,7 @@
 
             <!-- Digital Marketing Service Card -->
             <div class="service-card">
-                <img src="Assets/Images/logo2.png" alt="Digital Marketing - MetaWave" class="service-img" />
+                <img src="Assets/Images/DM&SEO/banner.png" alt="Digital Marketing - MetaWave" class="service-img" />
                 <h3>Digital Marketing & SEO</h3>
                 <p>Accelerate growth with MetaWave's powerful digital strategies — SEO, social media, content marketing,
                     and paid campaigns crafted to deliver measurable results.</p>
@@ -348,7 +350,316 @@
         </div>
     </section>
 
-
+  <!-- Solutions Section -->
+<section class="solutions-section">
+    <h2 class="section-title">Our Cutting-Edge Solutions</h2>
+    <p class="section-subtitle">We craft tailored solutions to help you grow, scale, and innovate in the digital era.</p>
+  
+    <div class="solutions-matrix">
+      <div class="matrix-column">
+        <div class="matrix-card top">
+          <h3>Product Development</h3>
+          <p>Create complete software or apps from start to finish.</p>
+        </div>
+        <div class="matrix-card">
+          <h3>Smart Reports</h3>
+          <p>See your business numbers in easy-to-read dashboards.</p>
+        </div>
+      </div>
+      <div class="matrix-column">
+        <div class="matrix-card">
+          <h3>Task Automation</h3>
+          <p>Use AI to handle repeat work and save your team's time.</p>
+        </div>
+        <div class="matrix-card highlighted">
+          <h3>Marketing Strategy</h3>
+          <p>Get more leads and customers with proven marketing plans.</p>
+        </div>
+      </div>
+      <div class="matrix-column">
+        <div class="matrix-card">
+          <h3>Cloud Setup</h3>
+          <p>Run your business apps online with secure, flexible tools.</p>
+        </div>
+        <div class="matrix-card">
+          <h3>Smart Chatbots</h3>
+          <p>Let AI bots answer common customer questions for you.</p>
+        </div>
+      </div>
+      <div class="matrix-column">
+        <div class="matrix-card">
+          <h3>Boost Conversions</h3>
+          <p>Make your website work better so more visitors take action.</p>
+        </div>
+        <div class="matrix-card bottom">
+          <h3>Privacy & Security</h3>
+          <p>Keep user data safe and meet international safety rules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  .solutions-section {
+    padding: 100px 40px;
+    background: #0A1A2E;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #D4AF37;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .section-subtitle {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 60px;
+  }
+  
+  .solutions-matrix {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  
+  .matrix-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .matrix-card {
+    background: linear-gradient(145deg, #101F33, #1B2F48);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .matrix-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.3);
+  }
+  
+  .matrix-card.highlighted {
+    background: radial-gradient(circle at top left, #D4AF37, #0A1A2E);
+    color: #000;
+  }
+  
+  .matrix-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .matrix-card.highlighted h3,
+  .matrix-card.highlighted p {
+    color: #fff;
+  }
+  
+  .matrix-card p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .solutions-section {
+      padding: 60px 20px;
+    }
+    .solutions-matrix {
+      flex-direction: column;
+    }
+  }
+  </style>
+<!-- Portfolio Section -->
+<section class="portfolio-section">
+    <h2 class="section-title">Our Project Portfolio</h2>
+    <p class="section-subtitle">Explore our recent projects across development, marketing, and AI innovation.</p>
+  
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="web">Web Development</button>
+      <button class="filter-btn" data-category="app">App Development</button>
+      <button class="filter-btn" data-category="marketing">Digital Marketing</button>
+      <button class="filter-btn" data-category="ai">AI & ML</button>
+    </div>
+  
+    <div class="portfolio-grid">
+      <div class="portfolio-card" data-category="web">
+        <img src="Assets/Portfolio/web1.jpg" alt="Web Project">
+        <div class="portfolio-info">
+          <h3>Corporate Website Redesign</h3>
+          <p>Modern UI/UX with optimized SEO and responsive design.</p>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="app">
+        <img src="Assets/Portfolio/app1.jpg" alt="App Project">
+        <div class="portfolio-info">
+          <h3>Mobile Banking App</h3>
+          <p>Secure and intuitive app for seamless digital transactions.</p>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="marketing">
+        <img src="Assets/Portfolio/marketing1.jpg" alt="Marketing Project">
+        <div class="portfolio-info">
+          <h3>Social Media Growth Campaign</h3>
+          <p>Boosted reach and engagement with smart content strategy.</p>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="ai">
+        <img src="Assets/Portfolio/ai1.jpg" alt="AI Project">
+        <div class="portfolio-info">
+          <h3>AI-Based Support Chatbot</h3>
+          <p>Real-time assistance for users using NLP and automation.</p>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="ai">
+        <img src="Assets/Portfolio/ai1.jpg" alt="AI Project">
+        <div class="portfolio-info">
+          <h3>AI-Based Support Chatbot</h3>
+          <p>Real-time assistance for users using NLP and automation.</p>
+        </div>
+      </div><div class="portfolio-card" data-category="ai">
+        <img src="Assets/Portfolio/ai1.jpg" alt="AI Project">
+        <div class="portfolio-info">
+          <h3>AI-Based Support Chatbot</h3>
+          <p>Real-time assistance for users using NLP and automation.</p>
+        </div>
+      </div><div class="portfolio-card" data-category="ai">
+        <img src="Assets/Portfolio/ai1.jpg" alt="AI Project">
+        <div class="portfolio-info">
+          <h3>AI-Based Support Chatbot</h3>
+          <p>Real-time assistance for users using NLP and automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  .portfolio-section {
+    padding: 100px 40px;
+    background: #0B1B2A;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #D4AF37;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .section-subtitle {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 50px;
+  }
+  
+  .portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: #D4AF37;
+    color: #000;
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .portfolio-card {
+    background: #101F33;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .portfolio-info {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .portfolio-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .portfolio-info p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-section {
+      padding: 60px 20px;
+    }
+  }
+  </style>
+  
+  <script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const category = btn.getAttribute('data-category');
+      document.querySelectorAll('.portfolio-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+  </script>
+  
 </body>
 
 </html>
