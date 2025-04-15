@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Contact Us | MetaWave Innovations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0B1B2A;
+            color: white;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #0B1B2A, #142A3E);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: #D4AF37;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #EDEDED;
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37;
+        }
+
+        .contact-section {
+            padding: 80px 40px;
+            background: #0F1E31;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            font-size: 48px;
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .contact-form-container {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background: #142A3E;
+            color: white;
+            font-size: 16px;
+            resize: none;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #aaa;
+        }
+
+        .contact-form button {
+            background-color: #D4AF37;
+            color: #0B1B2A;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #fff3b0;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+
+        .detail-box {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .detail-box h3 {
+            color: #D4AF37;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .detail-box p {
+            font-size: 15px;
+            color: #ccc;
+        }
+
+        .map-section {
+            margin-top: 60px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        footer {
+            background: linear-gradient(to right, #0B1B2A, #142A3E);
+            padding: 60px 40px 40px;
+            text-align: center;
+            color: #ccc;
+            border-top: 2px solid #D4AF37;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #D4AF37, transparent);
+        }
+
+        footer h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: #D4AF37;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        footer p {
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: #aaa;
+        }
+
+        footer .footer-bottom {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        footer .social-links a {
+            color: #D4AF37;
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #fff3b0;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .contact-section h1 {
+                font-size: 36px;
+            }
+
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ... existing content ... -->
+
+    <footer>
+        <h2>MetaWave Innovations</h2>
+        <p>Empowering startups, enterprises, and visionaries with cutting-edge Web, AI, and Digital Solutions. We are not just building products — we are building the future.</p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/company/metawave-innovations" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/metawaveio" target="_blank">Twitter</a>
+            <a href="https://instagram.com/metawave.io" target="_blank">Instagram</a>
+            <a href="https://github.com/metawave-innovations" target="_blank">GitHub</a>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 <span style="color: #D4AF37; font-weight: 600;">MetaWave Innovations</span>. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
