@@ -7,7 +7,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <title>About Us | MetaWave Innovations</title>
     <style>
         body {
@@ -113,7 +114,7 @@
         .about-hero {
             height: 100vh;
             background: radial-gradient(circle at center, #101f33 0%, #0B1B2A 100%),
-                url("https://github.com/MuntahaSheikh/MetaWave.Innovations/blob/main/assets/images/logo%20FUll.png?raw=true") center/contain no-repeat;
+                url("/assets/Images/logo\ FUll.png") center/contain no-repeat;
             background-blend-mode: overlay;
             background-size: cover;
             background-position: center;
@@ -280,31 +281,107 @@
         .services-overview h2 {
             font-size: 34px;
             color: #D4AF37;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
-        .service-item {
+        /* Service Card Styles */
+        .service-card {
             background: #142A3E;
-            padding: 20px;
-            border-radius: 12px;
-            font-size: 16px;
+            padding: 40px 20px;
+            border-radius: 16px;
             color: #ccc;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-card .icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #bbb;
+        }
+
+        /* Hover Effect */
+        .service-card:hover {
+            background: #D4AF37;
+            color: #0B1B2A;
+            transform: translateY(-5px) scale(1.03);
+        }
+
+        .service-card:hover h3,
+        .service-card:hover p,
+        .service-card:hover .icon {
+            color: #0B1B2A;
+            font-weight: 600;
+        }
+
+        /* Show More/Show Less Hidden Class */
+        .service-card.hidden {
+            display: none;
+        }
+
+
+
+        /* Button Styles */
+        .show-more-container {
+            text-align: right;
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        #toggleButton,
+        .talk-button {
+            background-color: #D4AF37;
+            color: #0B1B2A;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        #toggleButton:hover,
+        .talk-button:hover {
+            background-color: #b9942f;
+        }
+
+        #toggleButton i,
+        .talk-button i {
+            margin-right: 8px;
+        }
+
+        #toggleButton:hover i,
+        .talk-button:hover i {
+            filter: brightness(1.2) contrast(1.4);
             transition: all 0.3s ease;
         }
 
-        .service-item:hover {
-            background: #D4AF37;
-            color: #0B1B2A;
-            transform: scale(1.05);
-            font-weight: 600;
-        }
 
         @media(max-width: 768px) {
             .about-hero h1 {
@@ -313,6 +390,135 @@
 
             .about-hero p {
                 font-size: 16px;
+            }
+        }
+
+        .meta-footer {
+            background: linear-gradient(to right, #0B1B2A, #142A3E);
+            color: #ccc;
+            padding: 20px 80px 30px;
+            border-top: 2px solid #D4AF37;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-top {
+            justify-content: space-between;
+        }
+
+        .meta-footer h2 {
+            font-size: 32px;
+            color: #D4AF37;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .meta-footer p {
+            max-width: 600px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #bbb;
+            text-align: start;
+        }
+
+        .meta-footer .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            padding: 60px 80px 20px;
+        }
+
+        .meta-footer .social-icons .social {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            color: white;
+            background-color: #D4AF37;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+            border: 2px solid transparent;
+        }
+
+        /* Brand backgrounds */
+        .meta-footer .social.linkedin {
+            background-color: #0077B5;
+        }
+
+        .meta-footer .social.twitter {
+            background-color: #1DA1F2;
+        }
+
+        .meta-footer .social.instagram {
+            background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 40%, #d6249f 70%, #285AEB 100%);
+        }
+
+        .meta-footer .social.github {
+            background-color: #171515;
+        }
+
+        /* Hover Effects */
+        .meta-footer .social-icons .social:hover {
+            transform: scale(1.15);
+            border: 2px solid #D4AF37;
+            box-shadow: 0 0 15px #D4AF37;
+            color: #fff;
+        }
+
+        .meta-footer .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .meta-footer h4 {
+            color: #D4AF37;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .meta-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .meta-footer ul li {
+            margin: 8px 0;
+        }
+
+        .meta-footer ul li a {
+            text-decoration: none;
+            color: #aaa;
+            transition: color 0.3s;
+        }
+
+        .meta-footer ul li a:hover {
+            color: #D4AF37;
+        }
+
+        .meta-footer .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .meta-footer .golden {
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .meta-footer {
+                text-align: center;
+            }
+
+            .meta-footer .footer-grid {
+                text-align: left;
             }
         }
     </style>
@@ -366,7 +572,7 @@
                 </p>
             </div>
             <div class="image-block">
-                <img src="https://github.com/MuntahaSheikh/MetaWave.Innovations/blob/main/assets/images/team2.png?raw=true" alt="Team at Work" />
+                <img src="Assets/Images/Team2.png" alt="Team at Work" />
             </div>
         </div>
     </section>
@@ -390,17 +596,211 @@
 
     <section class="services-overview">
         <h2>Our Expertise</h2>
-        <div class="services-grid">
-            <div class="service-item">🌐 Web Development</div>
-            <div class="service-item">📱 Mobile Apps</div>
-            <div class="service-item">📈 Digital Marketing</div>
-            <div class="service-item">🤖 AI & Machine Learning</div>
-            <div class="service-item">💼 Business Automation</div>
-            <div class="service-item">☁️ Cloud Architecture</div>
-        </div>
-    </section>
-    <script src="//code.tidio.co/pndjra5dztv6cr2vsaggwwirvpxqkmjj.js" async></script>
+        <div class="services-grid" id="expertiseGrid">
+            <!-- Top 5 Expertise (Always Visible) -->
+            <div class="service-card">
+                <div class="icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive websites built for performance and impact.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📈</div>
+                <h3>Digital Marketing & SEO</h3>
+                <p>Boost your brand's visibility with SEO, PPC, and content strategy.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🤖</div>
+                <h3>AI & Machine Learning</h3>
+                <p>Unlock automation and insights with smart AI-powered solutions.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🎨</div>
+                <h3>Graphic Designing</h3>
+                <p>Brand identities, social content, and marketing visuals.</p>
+            </div>
 
+
+            <!-- Hidden Expertise (Initially Hidden) -->
+            <div class="service-card hidden">
+                <div class="icon">🧾</div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful, intuitive interfaces that delight users and convert.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">🛒</div>
+                <h3>E-Commerce Solutions</h3>
+                <p>Sell online with custom stores, payment gateways, and analytics.</p>
+            </div>
+
+            <div class="service-card hidden">
+                <div class="icon">📱</div>
+                <h3>Mobile App Development</h3>
+                <p>Native & cross-platform mobile apps tailored to your business.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">🎬</div>
+                <h3>Video Editing & Motion</h3>
+                <p>Engaging promo and explainer videos with animations and effects.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">💼</div>
+                <h3>Business Automation</h3>
+                <p>Streamline workflows and reduce manual effort with automation.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">📦</div>
+                <h3>Product Engineering</h3>
+                <p>End-to-end MVP to full product development for tech startups.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">☁️</div>
+                <h3>Cloud Solutions & DevOps</h3>
+                <p>Reliable cloud architecture with CI/CD and DevOps pipelines.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">📊</div>
+                <h3>AI-Powered Dashboards</h3>
+                <p>Real-time, data-driven dashboards powered by AI insights.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">💬</div>
+                <h3>Chatbots & Virtual Assistants</h3>
+                <p>24/7 automation for support, lead gen, and customer engagement.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">🔐</div>
+                <h3>Cybersecurity & Compliance</h3>
+                <p>Protect your systems with secure, GDPR-ready solutions.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">🧩</div>
+                <h3>API Integrations</h3>
+                <p>Connect third-party services for seamless digital ecosystems.</p>
+            </div>
+            <div class="service-card hidden">
+                <div class="icon">🎯</div>
+                <h3>Conversion Rate Optimization</h3>
+                <p>Turn traffic into sales through analytics and A/B testing.</p>
+            </div>
+        </div>
+
+        <!-- Button Row -->
+        <div class="show-more-container">
+            <button id="toggleButton">
+                <i class="fas fa-plus icon-gold"></i> Show More
+            </button>
+            <a href="contact.html" class="talk-button">
+                <i class="fas fa-comments icon-gold"></i> Talk with Expert
+            </a>
+        </div>
+
+
+        <!-- JavaScript for Toggle -->
+        <script>
+            const toggleButton = document.getElementById("toggleButton");
+            const hiddenCards = document.querySelectorAll(".service-card.hidden");
+            let currentVisible = 0;
+            const step = 4;
+
+            function showMore() {
+                let shown = 0;
+                for (let i = currentVisible; i < hiddenCards.length && shown < step; i++) {
+                    hiddenCards[i].style.display = "block";
+                    shown++;
+                    currentVisible++;
+                }
+
+                if (currentVisible >= hiddenCards.length) {
+                    toggleButton.innerHTML = '<i class="fas fa-minus icon-gold"></i> Show Less';
+
+                }
+            }
+
+            function showLess() {
+                hiddenCards.forEach(card => card.style.display = "none");
+                currentVisible = 0;
+                toggleButton.innerHTML = '<i class="fas fa-plus icon-gold"></i> Show More';
+
+            }
+
+            toggleButton.addEventListener("click", () => {
+                if (currentVisible >= hiddenCards.length) {
+                    showLess();
+                } else {
+                    showMore();
+                }
+            });
+
+            // Initialize all hidden cards
+            hiddenCards.forEach(card => card.style.display = "none");
+        </script>
+
+    </section>
+
+
+
+    <footer class="meta-footer">
+        <div class="footer-top" style="display: flex;">
+            <div style="text-align: center !important; align-items: center;">
+                <h2 style="display: flex; align-items: center; gap: 8px;">
+                    <img src="Assets/Images/logo.png" alt="MetaWave Logo" style="width: 60px; height: auto;">
+                    <span>MetaWave Innovations</span>
+                </h2>
+                <p>
+                    Building Next-Gen Web, AI & Digital Solutions. We turn bold ideas into powerful realities —
+                    empowering startups and global enterprises alike.
+                </p>
+
+
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/metawave-innovation" class="social linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/metawave.inn/" class="social twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/metawave.inn/" class="social instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://muntahasheikh.github.io/MetaWave.Innovations/" class="social github" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+
+
+
+        </div>
+
+        <div class="footer-grid">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="contact.html">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">AI & ML</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Global Offices</h4>
+                <p> • Karachi <br>
+                    • Dubai <br>
+                    • London <br>
+                    • New York
+                </p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:metawave.innovations@gmail.com">metawave.innovations@gmail.com</a><br>
+                    Phone: +92-317-3448493</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 <span class="golden">MetaWave Innovations</span>. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="//code.tidio.co/pndjra5dztv6cr2vsaggwwirvpxqkmjj.js" async></script>
 </body>
 
 </html>
